@@ -43,7 +43,7 @@ componentDidMount(){
 
         {this.state.books.length > 0?
         (
-          <CarouselHome />
+          <CarouselHome  data={this.state.books}/>
         ) : (
           <h3>No Books Found :(</h3>
         )}
