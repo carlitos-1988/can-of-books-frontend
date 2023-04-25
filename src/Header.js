@@ -11,8 +11,8 @@ class Header extends React.Component {
         {/* PLACEHOLDER: render a navigation link to the about page */}
         {/* <NavItem><Link to="/about" className="nav-link">About</Link></NavItem> */}
         <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link to="/" href="/">Home</Nav.Link>
+            <Nav.Link to="/about" href="/about">About</Nav.Link>
             
         </Nav>
       </Navbar>
