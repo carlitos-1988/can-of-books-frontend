@@ -12,7 +12,7 @@ class Profile extends Component {
       <Card.Body>
         <Card.Title>Heather Holocomb</Card.Title>
         <Card.Text>
-          Software developer with XYZ
+          Experienced product leader turned software developer located in Los Angeles, CA. Focused on creating real value for customers with great experiences. Studying full-stack software development at CodeFellows and looking for my next role on a product engineering team.
         </Card.Text>
         
       </Card.Body>
