@@ -21,13 +21,13 @@ class App extends React.Component {
           <Routes>
             <Route 
               exact path="/"
-              element={<BestBooks />}
+              element=<BestBooks />
             >
             </Route>
             {/* PLACEHOLDER: add a route with a path of '/about' that renders the `About` component */}
             <Route 
               exact path="/about"
-              element={<About />}
+              element=<About />
             >
             </Route>
           </Routes>
