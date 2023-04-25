@@ -18,7 +18,20 @@ class CarouselHome extends Component{
     render(){
         return(
             <>
-        <Carousel activeIndex={this.state.index} onSelect={this.handleSelect}>
+
+        {/* <p>{this.props.data.map(value =>{
+            return(
+                <>
+                <p>{value._id}</p>
+                <p>{value.title}</p>
+                <p>{value.description}</p>
+                </>
+            )
+        })}</p> */}
+        {/* <p>{this.props.data_id}</p>
+        <p>{this.props.data_id}</p> */}
+        {/* activeIndex={this.state.index} onSelect={this.handleSelect} */}
+        <Carousel >
             {this.props.data.map((slide, i) => {
             return (
                 <Carousel.Item key={i}>
