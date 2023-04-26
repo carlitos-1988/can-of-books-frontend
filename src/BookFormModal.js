@@ -25,6 +25,8 @@ class BookFormModal extends React.Component {
         console.log(bookObj);
         // TODO: send this object to my backend - use a 2nd handler 
         this.postBook(bookObj);
+
+        this.props.getBooks();
       }
 
       postBook = async (bookObj) => {
@@ -51,7 +53,7 @@ class BookFormModal extends React.Component {
     render(){
         return(
             <div className="modal show">
-            <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" show={this.props.show}>
+            <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" show={this.props.show} onClose={window.location.reload}>
                 <Modal.Dialog>
                     <Modal.Header closeButton>
                         <Modal.Title>Add a New Book</Modal.Title>

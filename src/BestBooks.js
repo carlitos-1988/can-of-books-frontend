@@ -72,6 +72,7 @@ componentDidMount(){
             show={this.state.showModal} 
             onClose={this.handleCloseModal}
             refresh={this.componentDidMount}
+            getBooks={this.getBooks}
             />
             </>
 
