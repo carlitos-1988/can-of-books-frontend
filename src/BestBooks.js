@@ -3,13 +3,15 @@ import CarouselHome from './CarouselHome';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import BookFormModal from './BookFormModal';
+import UpdateFormModal from './UpdateFormModal';
 
 class BestBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       books: [],
-      showModal: false
+      showModal: false,
+      showUpdateModal: false
     }
   }
 
@@ -65,6 +67,26 @@ class BestBooks extends React.Component {
     }
   }
 
+  handleOpenUpdateForm = ()=>{
+    this.setState({
+      showUpdateModal:true
+    })
+  }
+
+  handleFormCloseModal = () =>{
+    this.setState({
+      showUpdateModal:false
+    })
+  }
+
+    updateBook = async function(req, res,next){
+    try{
+
+    }catch(e){
+      next(e);
+    }
+  }
+
 
 
 
@@ -84,21 +106,33 @@ componentDidMount(){
       <>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
         <div className="d-grid gap-2">
-        <Button onClick={this.handleShowModal} size="lg">|    Add Book    |</Button>
+        <Button onClick={this.handleShowModal} size="lg">
+          |    Add Book    |
+        </Button>
         </div>
         {this.state.books.length > 0?
         ( <>
           <CarouselHome 
           data={this.state.books} 
-          deleteBook={this.deleteBook}  
+          deleteBook={this.deleteBook}
+          updateBook={this.handleOpenUpdateForm}
+          show={this.state.showUpdateModal}
+          onClose={this.handleFormCloseModal}
+          updateBooks={this.updateBook} 
           />
-          
           <BookFormModal 
             show={this.state.showModal} 
             onClose={this.handleCloseModal}
             refresh={this.componentDidMount}
             getBooks={this.getBooks}
             />
+          
+          {/* <UpdateModal 
+            show={this.state.showUpdateModal}
+            onClose ={this.handleFormCloseModal}
+            refresh={this.componentDidMount}
+            getBooks={this.updateBook}
+          /> */}
             </>
 
         ) : (
