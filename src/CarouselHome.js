@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Carousel } from "react-bootstrap";
 import bookImg from './img/book.jpg';
 import { Button } from "react-bootstrap";
+import UpdateFormModal from "./UpdateFormModal";
 
 class CarouselHome extends Component{
     constructor(props){
@@ -41,13 +42,21 @@ class CarouselHome extends Component{
                         <h3>{slide.title}</h3>
                         <p>{slide.description}</p>
                         <div className="d-grid gap-2">
+                            <Button onClick={() =>this.props.updateBook(slide._id)} variant="primary" size="lg">
+                                Edit Book
+                            </Button>
                             <Button onClick={() =>this.props.deleteBook(slide._id)} variant="primary" size="lg">
                                 Remove Book
                             </Button>
+                            <UpdateFormModal            
+                            show={this.props.show}
+                            onClose={this.props.onClose}
+                            updateBooks={this.props.updateBook}
+                            data={slide}
+
+                            />
                         </div>  
                     </Carousel.Caption>
-                      
-
                 </Carousel.Item>
                 );
         })}

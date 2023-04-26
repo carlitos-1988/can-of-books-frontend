@@ -66,6 +66,26 @@ Finish time: _2030____
 
 Actual time needed to complete: _4.5____
 
+Name of feature: __**Initial Front End**__________________________
+
+Estimate of time needed to complete: **4 Hours**
+
+Start time: _1400____
+
+Finish time: _1900____
+
+Actual time needed to complete: _5 Hours____
+
+Name of feature: __**Day 3**__________________________
+
+Estimate of time needed to complete: 5 hours____
+
+Start time: _1400____
+
+Finish time: _2030____
+
+Actual time needed to complete: _4.5____
+
 ## Partner Agreement
 
 Logistical
