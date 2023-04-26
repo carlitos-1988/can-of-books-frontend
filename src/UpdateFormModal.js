@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Modal, Form, Button } from 'react-bootstrap';
 // import BestBooks from './BestBooks.js';
-import axios from 'axios';
+// import axios from 'axios';
 
 class UpdateFormModal extends Component{
     
@@ -12,30 +12,30 @@ class UpdateFormModal extends Component{
             title: event.target.title.value,
             description: event.target.description.value,
             status: event.target.status.value, 
-            _id: this.props.book._id,
-            _v: this.props.book._v
+             _id: this.props.data._id,
+             __v: this.props.data._v
         }
 
-        // console.log('Book to update: ', bookToUpdate);
+        console.log('Book to update: ', bookToUpdate);
 
 
-        this.props.updateBook(bookToUpdate);
+        this.props.formUpdateBook(bookToUpdate);
     }
     
-    updateBooks = async (bookToUpdate)=>{
-        try{
-            //TODO: create URL for axios:
-            let url = `${process.env.REACT_APP_SERVER}/books/${bookToUpdate._id}`
+    // updateBooks = async (bookToUpdate)=>{
+    //     try{
+    //         //TODO: create URL for axios:
+    //         let url = `${process.env.REACT_APP_SERVER}/books/${bookToUpdate._id}`
     
-            //TODO: send axios on a PUT
-            await axios.put(url, bookToUpdate);
+    //         //TODO: send axios on a PUT
+    //         await axios.put(url, bookToUpdate);
 
-            this.props.getBooks();
+    //         this.props.getBooks();
 
-        }catch(e){
-            console.log(e.message);
-        }
-    }
+    //     }catch(e){
+    //         console.log(e.message);
+    //     }
+    // }
     
     render(){
         return(

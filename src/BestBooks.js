@@ -78,13 +78,20 @@ class BestBooks extends React.Component {
     })
   }
 
-    updateBook = async function(req, res,next){
+  updateBook = async (bookToUpdate)=>{
     try{
+        //TODO: create URL for axios:
+        let url = `${process.env.REACT_APP_SERVER}/books/${bookToUpdate._id}`
+
+        //TODO: send axios on a PUT
+        await axios.put(url, bookToUpdate);
+
+        this.getBooks();
 
     }catch(e){
-      next(e);
+        console.log(e.message);
     }
-  }
+}
 
 
 
@@ -117,7 +124,7 @@ componentDidMount(){
           updateBook={this.handleOpenUpdateForm}
           show={this.state.showUpdateModal}
           onClose={this.handleFormCloseModal}
-          updateBooks={this.updateBook}
+          formUpdateBook={this.updateBook}
           getBooks={this.getBooks}
           // stateBooks = {this.state.books} 
           />

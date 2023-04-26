@@ -36,24 +36,25 @@ class CarouselHome extends Component{
         <Carousel >
             {this.props.data.map((slide, i) => {
             return (
-                <Carousel.Item key={i}>
+                <Carousel.Item key={i} >
                 <img className="d-block w-100" src={bookImg} alt="slider imageA" />
                     <Carousel.Caption>
                         <h3>Title: {slide.title}</h3>
                         <p>Description: {slide.description}</p>
                         <p>Status: {slide.status}</p>
                         <div className="d-grid gap-2">
-                            <Button onClick={() =>this.props.updateBook(slide._id)} variant="primary" size="lg">
+                            <Button onClick={() =>this.props.updateBook()} variant="primary" size="lg">
                                 Edit Book
                             </Button>
                             <Button onClick={() =>this.props.deleteBook(slide._id)} variant="primary" size="lg">
                                 Remove Book
                             </Button>
-                            <UpdateFormModal            
+                            <UpdateFormModal
                             show={this.props.show}
                             onClose={this.props.onClose}
-                            updateBooks={this.props.updateBook}
+                            // updateBook={this.props.updateBook}
                             data={slide}
+                            formUpdateBook={this.props.formUpdateBook}
 
                             />
                         </div>  
