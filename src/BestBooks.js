@@ -46,6 +46,25 @@ class BestBooks extends React.Component {
     });
   }
 
+  //delete cats 
+  deleteBook = async(bookID) => {
+    try{
+      //url http://localhost:3001/books/
+      let url = `${process.env.REACT_APP_SERVER}/books/${bookID}`;
+      console.log(url); 
+
+      await axios.delete(url);
+
+      let updatedBooks = this.state.books.filter(book => book._id !== bookID);
+      this.setState({
+        books: updatedBooks
+      })
+
+    }catch(error){
+      console.log(error.message)
+    }
+  }
+
 
 
 
@@ -64,11 +83,16 @@ componentDidMount(){
     return (
       <>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
-
+        <div className="d-grid gap-2">
+        <Button onClick={this.handleShowModal} size="lg">|    Add Book    |</Button>
+        </div>
         {this.state.books.length > 0?
         ( <>
-          <CarouselHome data={this.state.books} />
-          <Button onClick={this.handleShowModal}>Create</Button>
+          <CarouselHome 
+          data={this.state.books} 
+          deleteBook={this.deleteBook}  
+          />
+          
           <BookFormModal 
             show={this.state.showModal} 
             onClose={this.handleCloseModal}

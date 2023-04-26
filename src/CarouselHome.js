@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Carousel } from "react-bootstrap";
 import bookImg from './img/book.jpg';
+import { Button } from "react-bootstrap";
 
 class CarouselHome extends Component{
     constructor(props){
@@ -39,7 +40,14 @@ class CarouselHome extends Component{
                     <Carousel.Caption>
                         <h3>{slide.title}</h3>
                         <p>{slide.description}</p>
+                        <div className="d-grid gap-2">
+                            <Button onClick={() =>this.props.deleteBook(slide._id)} variant="primary" size="lg">
+                                Remove Book
+                            </Button>
+                        </div>  
                     </Carousel.Caption>
+                      
+
                 </Carousel.Item>
                 );
         })}
