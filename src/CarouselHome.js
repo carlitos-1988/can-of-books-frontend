@@ -39,8 +39,9 @@ class CarouselHome extends Component{
                 <Carousel.Item key={i}>
                 <img className="d-block w-100" src={bookImg} alt="slider imageA" />
                     <Carousel.Caption>
-                        <h3>{slide.title}</h3>
-                        <p>{slide.description}</p>
+                        <h3>Title: {slide.title}</h3>
+                        <p>Description: {slide.description}</p>
+                        <p>Status: {slide.status}</p>
                         <div className="d-grid gap-2">
                             <Button onClick={() =>this.props.updateBook(slide._id)} variant="primary" size="lg">
                                 Edit Book

@@ -3,7 +3,6 @@ import CarouselHome from './CarouselHome';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import BookFormModal from './BookFormModal';
-import UpdateFormModal from './UpdateFormModal';
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -118,7 +117,9 @@ componentDidMount(){
           updateBook={this.handleOpenUpdateForm}
           show={this.state.showUpdateModal}
           onClose={this.handleFormCloseModal}
-          updateBooks={this.updateBook} 
+          updateBooks={this.updateBook}
+          getBooks={this.getBooks}
+          // stateBooks = {this.state.books} 
           />
           <BookFormModal 
             show={this.state.showModal} 
@@ -126,13 +127,7 @@ componentDidMount(){
             refresh={this.componentDidMount}
             getBooks={this.getBooks}
             />
-          
-          {/* <UpdateModal 
-            show={this.state.showUpdateModal}
-            onClose ={this.handleFormCloseModal}
-            refresh={this.componentDidMount}
-            getBooks={this.updateBook}
-          /> */}
+
             </>
 
         ) : (
