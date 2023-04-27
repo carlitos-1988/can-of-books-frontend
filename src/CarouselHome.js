@@ -8,32 +8,22 @@ class CarouselHome extends Component{
     constructor(props){
         super(props);
         this.state = {
-            index: 0
+            index: 0,
+            selectedBook : {}
         }
     }
+handleUpdate = (book)=>{
+    this.props.updateBook();
+    this.setState({
+        selectedBook:book
+    })
+}
 
-    handleSelect(selectedIndex, e){
-        this.state({
-            index: selectedIndex
-        });
-    }
+
     render(){
         return(
             <>
-
-        {/* <p>{this.props.data.map(value =>{
-            return(
-                <>
-                <p>{value._id}</p>
-                <p>{value.title}</p>
-                <p>{value.description}</p>
-                </>
-            )
-        })}</p> */}
-        {/* <p>{this.props.data_id}</p>
-        <p>{this.props.data_id}</p> */}
-        {/* activeIndex={this.state.index} onSelect={this.handleSelect} */}
-        <Carousel >
+        <Carousel>
             {this.props.data.map((slide, i) => {
             return (
                 <Carousel.Item key={i} >
@@ -43,26 +33,25 @@ class CarouselHome extends Component{
                         <p>Description: {slide.description}</p>
                         <p>Status: {slide.status}</p>
                         <div className="d-grid gap-2">
-                            <Button onClick={() =>this.props.updateBook()} variant="primary" size="lg">
+                            <Button onClick={() => this.handleUpdate(slide)} variant="primary" size="lg">
                                 Edit Book
                             </Button>
                             <Button onClick={() =>this.props.deleteBook(slide._id)} variant="primary" size="lg">
                                 Remove Book
                             </Button>
-                            <UpdateFormModal
-                            show={this.props.show}
-                            onClose={this.props.onClose}
-                            // updateBook={this.props.updateBook}
-                            data={slide}
-                            formUpdateBook={this.props.formUpdateBook}
-
-                            />
                         </div>  
                     </Carousel.Caption>
                 </Carousel.Item>
                 );
         })}
         </Carousel>
+        <UpdateFormModal
+            show={this.props.show}
+            onClose={this.props.onClose}
+            // updateBook={this.props.updateBook}
+            data={this.state.selectedBook}
+            formUpdateBook={this.props.formUpdateBook}
+        />
         </>
         );
     }

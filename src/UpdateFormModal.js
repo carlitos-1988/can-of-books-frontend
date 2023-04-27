@@ -38,6 +38,7 @@ class UpdateFormModal extends Component{
     // }
     
     render(){
+        // console.log(this.props.data);
         return(
             <div className="modal show">
             <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" show={this.props.show} onClose={window.location.reload}>
@@ -58,6 +59,7 @@ class UpdateFormModal extends Component{
                             <Form.Group controlId='status'>
                                 <Form.Label>Status</Form.Label>
                                 <Form.Control defaultValue={this.props.data.status} type="text" />
+                                <p>{this.props.data2}</p>
                             </Form.Group>                        
                             <Button variant="primary" type="submit" onClick={this.props.onClose}>Save</Button>
                             <Button variant="secondary" onClick={this.props.onClose}>Close</Button>
