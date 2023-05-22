@@ -1,0 +1,31 @@
+.cta-link {
+    text-decoration: none;
+  }
+  
+  .call-to-action {
+    padding: 18px 28px;
+    color: #fff;
+    font-family: 'Montserrat';
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .call-to-action-scheduling {
+    background: linear-gradient(45deg, #FF80CC, #FF0080);
+  }
+  
+  .call-to-action-add-employee {
+    background: linear-gradient(45deg, #00BFFF, #ADD8E6);
+  }
+  
+  .video {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 40%;
+  }
+  
