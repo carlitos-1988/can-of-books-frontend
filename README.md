@@ -1,134 +1,109 @@
-# Can of Books
 
-**Author**: Heather Holcomb & Juan Olmedo
+# MediCalendar
 
-## Quick Links
+## Team Members/Developers
 
-- [Deployed App](https://can-of-books-lab-11.netlify.app/)
-- [Deployed Server](https://can-of-books-backend-1g4p.onrender.com)
-- [Front End Repo](https://can-of-books-lab-11.netlify.app/)
-- [Back End Repo](https://can-of-books-backend-1g4p.onrender.com )
-- [Trello Board](https://trello.com/b/Kh1btKiQ/can-of-books)
-- [Team Agreement](https://docs.google.com/document/d/16s3W6gLlgHNnYluvPjqSdJSIg6N7Uu-PuS4wnatdupk/edit#)
+- Kyle White
+- Josh Coffey
+- Juan Olmedo
+- Jeanette Leyva
 
-## What can books do?
+### PM Tools
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+- [Trello] https://trello.com/b/P9d5qZe6/team-2-app
+- [Invision] https://kylewhite378860.invisionapp.com/freehand/301-Final-Project-Wireframe-Team-2-qCW8rIXAf?duplicateSuccess=true
 
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+## Version Control: 1.4.0
+
+- Updated on 5-5-23 - Site is ready with MVP requirements intact and first level styling applied
+- Updated on 5-4-23 - Created CRUD functionality within employee database feature. Implemented E-mail API to calendar changes.
+- Updated on 5-3-23 - Application fully deployed on Render and Netlify
+- Updated on 5-2-23 - Updated to include calendar component and Auth0 implementation
+- Updated on 5-1-23 - Application now has basic front and back end framework structure
 
 ## Overview
 
-Front end site to give suers a listing of books currently held in our developed back end
+This application will generate shifts in a random order and ensure people work all shifts available. It will also ensure that shift constrainst are being adhered to for example minimum staff and seniority requirements for patient care. 
+
+## Why We Built This Application
+
+Many healthcare institutions still rely on paper-based scheduling systems, which can result in a variety of issues. Management may exhibit favoritism by giving preferred employees more favorable shifts, leading to inequities in scheduling. Additionally, due to the lack of visibility, employees may be unaware of changes to the schedule, leading to confusion and potential scheduling conflicts. It is imperative that hospitals and other healthcare organizations transition to modern, digital scheduling systems to improve efficiency and ensure fair and transparent scheduling practices.
 
 ## Getting Started
 
-npm install - to download all dependencies for project
+1. Create a new React application on your local machine.
+2. Create a GitHub repository and clone this project onto your local machine into the new React application folder.
+3. Create a new user account on SendGrid and get your own personal API key.
+4. Create an Auth0 login and acquire user information (see setup instructions on Auth0)
+5. Create a .env file and implement all environment variables for Auth0 and REACT_APP_SERVER
+6. Run 'npm i' and 'npm update' on your local machine to install all dependencies
+7. Start the application using your favorite code editor!
 
 ## Architecture
 
-![WRCC Diagram](src/img/lab11_wrrc.png)
-
-## Main technologies used
-
-- axios
-- bootstrap
-- react
-- react-bootstrap
-
-## Change Log
-
-24 Apr 2023 - Application now has a fully-functional express server, with a GET route for the location resource.
+Built using React, Bootstrap, Auth0, Sass, CSS3, HTML5, JavaScript, and axios API handler.
 
 ## Credit and Collaborations
+<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-Heather Holocomb -  <https://github.com/holcombheather/can-of-books-backend>
+# Getting Started with Create React App
 
-## Estimates
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Name of feature: __**Initial Front End**__________________________
+## Available Scripts
 
-Estimate of time needed to complete: **4 Hours**
+In the project directory, you can run:
 
-Start time: _1400____
+### `npm start`
 
-Finish time: _1900____
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Actual time needed to complete: _5 Hours____
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Name of feature: __**Day 2**__________________________
+### `npm test`
 
-Estimate of time needed to complete: 5 hours____
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Start time: _1600____
+### `npm run build`
 
-Finish time: _2030____
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Actual time needed to complete: _4.5____
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Name of feature: __**Initial Front End**__________________________
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Estimate of time needed to complete: **4 Hours**
+### `npm run eject`
 
-Start time: _1400____
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Finish time: _1900____
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Actual time needed to complete: _5 Hours____
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Name of feature: __**Day 3**__________________________
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Estimate of time needed to complete: 5 hours____
+## Learn More
 
-Start time: _1400____
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Finish time: _2030____
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Actual time needed to complete: _4.5____
+## Installed Packages 
 
-## Partner Agreement
+npm install react-router-dom localforage match-sorter sort-by
+npm install react-bootstrap bootstrap
+npm install @mui/material @emotion/react @emotion/styled
 
-Logistical
-What hours will you be available to communicate?
-Juan: 2pm - 12am
-Heather: 8am-9am; 1pm - 6pm; 8:30pm-12am
-What platform will you use to communicate (ie. Slack, phone …)?
-Slack - DM
-Remo - Project Table on Floor 3
-How often will you take breaks?
-Every hour on the hour
-What is your plan if you start to fall behind?
-We will make sure we get TA help as needed.
-Cooperative
-Make a list of each person's strengths.
-Juan:
-JS
-Server side js
-Heather:
-Front end
-Design/CSS
-Customer Profiles/Product Reqs
-How can you best utilize these strengths in the development of your application?
-We can use our strengths to either own that part of the project or if it’s something the other person wants to work on, then the other can use the strength in that area to review and help out when needed.
-In what areas do you each want to develop greater strength?
-Juan: I would like to be a better front end programmer more so in the areas of bootstrap. I would also like to understand server side programming more and use both APIs and Databases
-Heather: I would like more practice manipulating state and using it for both APIs and DB calls.
-Knowing that every person in your team needs to understand the code, how do you plan to approach the day-to-day development?
-Stand Up Meetings every day for what we have done and what needs to be done.
-Using Trello and keeping it up to date.
-Use slack to update each other on changes/updates if we can’t meet in person.
-Conflict Resolution
-What will your team do if one person is pulling all the weight while the other person is not contributing?
-We will each communicate the lack of contributions to the project in an honest and open manner. We both understand that this is a graded assignment and working together is key to this project.
-What will your team do if one person is taking over the project and not letting the other member contribute?
-We will ensure we remain open to any feedback anybody may have.
-How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?
-We will ensure we work together through any issues and help each other explain the code written by each person.
+npm install tachyons@4.12.0
+https://tachyons.io/
 
-REPOS:
-REPO-FRONT-END:   <https://github.com/carlitos-1988/can-of-books-frontend>
-REPO-BACK-END: <https://github.com/holcombheather/can-of-books-backend>
+npm i react-landing-page@next
+https://hermanya.github.io/react-landing-page/getting-started/
 
-Deployed sites:
-Front End: <https://can-of-books-lab-11.netlify.app/>
-Back End: <https://can-of-books-backend-1g4p.onrender.com>
+
+
